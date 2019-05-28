@@ -30,7 +30,8 @@ summary(traindata)
 traindata[traindata == ""] <- NA  #用NA代替所有的空白
 traindata <- traindata[complete.cases(traindata),]        #处理缺失值，即成列删除
 
-#建模效果的展示
+
+#建模效果的展示,选择重要性变量
 rf<- randomForest(biomass~.-ID-X-Y-Map_x-Map_y-Lat-Lon, data=biomass22, importance = TRUE, mtry=1, do.trace=100, ntree =300, oob.prox = TRUE, nodesize=5) #随机森林核心语句，biomass为因变量，-ID为减去不需要的自变量，mtry，ntree等参数可以调整以改进建模结果 data为参与的csv
 print(rf) 
 importance(rf) #查看模型自变量的重要性，值越大，越重要。第一遍运行到此结束
