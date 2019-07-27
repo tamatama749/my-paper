@@ -1,0 +1,30 @@
+#install necessary packages
+#install.packages(c("raster","sp","rgdal","randomForest"),"E:/Ran")
+
+#.libPaths("N:/ursa/meng/Random Forest/library")
+
+#set the workspace
+setwd("E:/Ranmeng/RF/")
+#load necessary libraries
+library(raster)
+library(sp)
+library(rgdal)
+library(randomForest)
+#read training sampels
+samples <- read.csv('samples for all.csv')
+#train samples using random forest
+rfdata <- randomForest(Type ~ ., data= samples, importance=TRUE, proximity=TRUE)
+
+#read the RS imagery 
+#2007
+whole_bands=brick("Np36r34_all07")
+#specify the band names
+layerNames(whole_bands)=c("B1.band1","B2.band2","B3.band3","B4.b4","B5.b5","B6.b7","B7.b1","B8.b2","B9.b3","B10.b4","B11.b5","B12.b7","B13.06h1","B14.06h2","B15.06h3","B16.06h4","B17.06h5","B18.06h7",
+"B19.07h1","B20.07h2","B21.07h3","B22.07h4","B23.07h5","B24.07h7","B25.06br","B26.06gr","B27.06we","B28.07br","B29.07gr","B30.07we","B31.06pc1","B32.06pc2","B33.06pc3","B34.06pc4","B35.06pc5"
+ ,"B36.06pc6","B37.07pc1","B38.07pc2","B39.07pc3","B40.07pc4","B41.07pc5","B42.07pc6","B43.dem","B44.slope","B45.aspect")
+
+## predict the classification results using decision tress built by RF
+re_p36r34_07 <- predict(whole_bands,rfdata,type="prob",nodes=TRUE)
+##output classfication resulst in envi format 
+writeRaster(re_p36r34_07,"Np36r34_TD_2007",format="ENVI",dataType="FLT4S",overwrite=TRUE)
+
