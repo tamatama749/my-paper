@@ -5,7 +5,6 @@ import numpy as np
 from dbscan import dbscan
 from sklearn.cluster import DBSCAN
 from sklearn.cluster import OPTICS
-from sklearn.cluster import KMeans
 from spectral_clustering import chose_para
 from sklearn.datasets import make_classification
 from sklearn.mixture import GaussianMixture
@@ -58,18 +57,8 @@ print(kmeans_xyd.shape)
 data_norm=normalize(kmeans_xyd,axis=0,norm='max')
 # data_norm=normalize(kmeans_xyd,axis=2,norm='max')
 
-# #kmeans方法
-# def kmeans__cluster(data_norm):
-# 	kmeans_predict = KMeans(n_clusters=50).fit_predict(data_norm)
-# 	matrix = np.zeros((data_x,data_y))
-#   matrix = matrix+200
-# 	for i in range(kmeans_xy.shape[0]):
-# 		matrix[kmeans_xy[i][0]][kmeans_xy[i][1]]=kmeans_predict[i]
-# 	return matrix
 
-
-#Dbscan方法
-#eps参数选取
+#方法一：eps参数选取
 import matplotlib.pyplot as plt;
 def select_MinPts(data_norm,k):
     k_dist = []
@@ -88,39 +77,34 @@ plt.plot([0,15],[eps,eps],linestyle="--",color = "r")
 plt.plot([15,15],[0,eps],linestyle="--",color = "r")
 
 plt.show()
-#建立聚类模型
-# def dbscan_cluster(data_norm):
-# 	print("start dbscan")
-# 	dbscan_result =DBSCAN(eps=0.1,min_samples=k+1).fit_predict(data_norm)
-# 	matrix = np.zeros((data_x, data_y)) #初始化0矩阵,之后可以加你想要的值
-# 	matrix = matrix+200
-# 	for i in range(kmeans_xy.shape[0]):
-# 		matrix[kmeans_xy[i][0]][kmeans_xy[i][1]] = dbscan_result[i]
-# 	# Optics_result =OPTICS(min_samples=3).fit(data_norm)
-# 	# print("result matrix",np.max(matrix))
-# 	return matrix
 
-# # GMM方法
-# def GMM_cluster(data_norm):
-# 	model = GaussianMixture(n_components=10)
-# 	model.fit(data_norm)
-# 	yhat = model.predict(data_norm)
-# 	matrix = np.zeros((data_x, data_y))
-#   matrix = matrix + 200
-# 	for i in range(kmeans_xy.shape[0]):
-# 		matrix[kmeans_xy[i][0]][kmeans_xy[i][1]] = yhat[i]
-# 	return metrix
+# 方法二：迭代不同值的参数
+# 构建空列表，用于保存不同参数组合下的结果
+res = []
+# 迭代不同的eps值
+for eps in np.arange(0.001,1,0.05):
+    # 迭代不同的min_samples值
+    for min_samples in range(2,10):
+        dbscan = DBSCAN(eps = eps, min_samples = min_samples)
+        # 模型拟合
+        dbscan.fit(data_norm)
+        # 统计各参数组合下的聚类个数（-1表示异常点）
+        n_clusters = len([i for i in set(dbscan.labels_) if i != -1])
+        # 异常点的个数
+        outliners = np.sum(np.where(dbscan.labels_ == -1, 1,0))
+        # 统计每个簇的样本个数
+        stats = str(pd.Series([i for i in dbscan.labels_ if i != -1]).value_counts().values)
+        res.append({'eps':eps,'min_samples':min_samples,'n_clusters':n_clusters,'outliners':outliners,'stats':stats})
+# 将迭代后的结果存储到数据框中
+df = pd.DataFrame(res)
+
+# 根据条件筛选合理的参数组合
+df.loc[df.n_clusters == 3, :]
 
 
-# kmeans_result = kmeans__cluster(data_norm)
-# Dbscan_result = dbscan_cluster(data_norm)
-# GMM_result = GMM_cluster(data_norm)
 
-# print("start gdal")
-# raster_file = 'H:/basicData/MCD64A1_output/DXAL_mcd64a1/dbscan_Rastercalc12.tif'  # 输出的栅格文件路径
-# src_ras_file = "H:/basicData/MCD64A1_output/DXAL_mcd64a1/dxal_MCD64A1_2002_Clip1.tif"  # 提供地理坐标信息和几何信息的栅格底图
-# dataset = gdal.Open(src_ras_file)
-# projection = dataset.GetProjection()
-# transform = dataset.GetGeoTransform()
-#
-# arr2raster(Dbscan_result, raster_file, prj=projection, trans=transform)
+
+
+
+
+
