@@ -1,0 +1,43 @@
+Cu.tif has GDAL driver GTiff 
+and has 132 rows and 126 columns
+dTRI.tif has GDAL driver GTiff 
+and has 131 rows and 125 columns
+警告信息：
+1: GDAL support is provided by the sf and terra packages among others
+2: GDAL support is provided by the sf and terra packages among others
+3: GDAL support is provided by the sf and terra packages among others
+4: GDAL support is provided by the sf and terra packages among others
+5: In cbind(rep(NA, ColNum) + 2, dataMatrix) :
+  number of rows of result is not a multiple of vector length (arg 1)
+6: In cbind(dataMatrix, rep(NA, ColNum) + 2) :
+  number of rows of result is not a multiple of vector length (arg 2)
+7: In cbind(rep(NA, ColNum) + 2, dataMatrix) :
+  number of rows of result is not a multiple of vector length (arg 1)
+8: In cbind(dataMatrix, rep(NA, ColNum) + 2) :
+  number of rows of result is not a multiple of vector length (arg 2)
+9: In cbind(rep(NA, ColNum) + 2, dataMatrix) :
+  number of rows of result is not a multiple of vector length (arg 1)
+10: In cbind(dataMatrix, rep(NA, ColNum) + 2) :
+  number of rows of result is not a multiple of vector length (arg 2)
+11: In cbind(rep(NA, ColNum) + 2, dataMatrix) :
+  number of rows of result is not a multiple of vector length (arg 1)
+12: In cbind(dataMatrix, rep(NA, ColNum) + 2) :
+  number of rows of result is not a multiple of vector length (arg 2)
+13: In cbind(rep(NA, ColNum) + 2, dataMatrix) :
+  number of rows of result is not a multiple of vector length (arg 1)
+14: In cbind(dataMatrix, rep(NA, ColNum) + 2) :
+  number of rows of result is not a multiple of vector length (arg 2)
+15: In cbind(rep(NA, ColNum) + 2, dataMatrix) :
+  number of rows of result is not a multiple of vector length (arg 1)
+16: In cbind(dataMatrix, rep(NA, ColNum) + 2) :
+  number of rows of result is not a multiple of vector length (arg 2)
+Cu.tif has GDAL driver GTiff 
+and has 132 rows and 126 columns
+dTRI.tif has GDAL driver GTiff 
+and has 131 rows and 125 columns
+Cu.tif has GDAL driver GTiff 
+and has 132 rows and 126 columns
+dTRI.tif has GDAL driver GTiff 
+and has 131 rows and 125 columns
+Time difference of 106.7095 mins
+Time difference of 91.23806 mins

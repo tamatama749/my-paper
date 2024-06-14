@@ -1,0 +1,93 @@
+Cu.tif has GDAL driver GTiff 
+and has 132 rows and 126 columns
+dTRI.tif has GDAL driver GTiff 
+and has 131 rows and 125 columns
+程序包‘gtable’打开成功，MD5和检查也通过
+程序包‘gridExtra’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\suhui\AppData\Local\Temp\RtmpOcFRNX\downloaded_packages里
+程序包‘utf8’打开成功，MD5和检查也通过
+程序包‘fansi’打开成功，MD5和检查也通过
+程序包‘pillar’打开成功，MD5和检查也通过
+程序包‘pkgconfig’打开成功，MD5和检查也通过
+程序包‘plyr’打开成功，MD5和检查也通过
+程序包‘isoband’打开成功，MD5和检查也通过
+程序包‘tibble’打开成功，MD5和检查也通过
+程序包‘vctrs’打开成功，MD5和检查也通过
+程序包‘withr’打开成功，MD5和检查也通过
+程序包‘reshape’打开成功，MD5和检查也通过
+程序包‘ggplot2’打开成功，MD5和检查也通过
+程序包‘BH’打开成功，MD5和检查也通过
+程序包‘automap’打开成功，MD5和检查也通过
+程序包‘MBA’打开成功，MD5和检查也通过
+程序包‘mvtnorm’打开成功，MD5和检查也通过
+程序包‘evd’打开成功，MD5和检查也通过
+程序包‘intamap’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\suhui\AppData\Local\Temp\RtmpOcFRNX\downloaded_packages里
+程序包‘maxlike’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\suhui\AppData\Local\Temp\RtmpOcFRNX\downloaded_packages里
+程序包‘deldir’打开成功，MD5和检查也通过
+程序包‘polyclip’打开成功，MD5和检查也通过
+程序包‘spatstat.sparse’打开成功，MD5和检查也通过
+程序包‘goftest’打开成功，MD5和检查也通过
+程序包‘tensor’打开成功，MD5和检查也通过
+程序包‘spatstat.data’打开成功，MD5和检查也通过
+程序包‘spatstat.geom’打开成功，MD5和检查也通过
+程序包‘spatstat.random’打开成功，MD5和检查也通过
+程序包‘spatstat.explore’打开成功，MD5和检查也通过
+程序包‘spatstat.model’打开成功，MD5和检查也通过
+程序包‘spatstat.linnet’打开成功，MD5和检查也通过
+程序包‘spatstat.utils’打开成功，MD5和检查也通过
+程序包‘spatstat’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\suhui\AppData\Local\Temp\RtmpOcFRNX\downloaded_packages里
+程序包‘entropy’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\suhui\AppData\Local\Temp\RtmpOcFRNX\downloaded_packages里
+程序包‘cpp11’打开成功，MD5和检查也通过
+程序包‘igraph’打开成功，MD5和检查也通过
+程序包‘gdistance’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\suhui\AppData\Local\Temp\RtmpOcFRNX\downloaded_packages里
+
+  有二进制版本的，但源代码版本是后来的:
+        binary source needs_compilation
+openssl  2.1.2  2.2.0              TRUE
+
+程序包‘sys’打开成功，MD5和检查也通过
+程序包‘rematch’打开成功，MD5和检查也通过
+程序包‘crayon’打开成功，MD5和检查也通过
+程序包‘hms’打开成功，MD5和检查也通过
+程序包‘prettyunits’打开成功，MD5和检查也通过
+程序包‘askpass’打开成功，MD5和检查也通过
+程序包‘rootSolve’打开成功，MD5和检查也通过
+程序包‘lmom’打开成功，MD5和检查也通过
+程序包‘cellranger’打开成功，MD5和检查也通过
+程序包‘progress’打开成功，MD5和检查也通过
+程序包‘curl’打开成功，MD5和检查也通过
+程序包‘mime’打开成功，MD5和检查也通过
+程序包‘expm’打开成功，MD5和检查也通过
+程序包‘rstudioapi’打开成功，MD5和检查也通过
+程序包‘Exact’打开成功，MD5和检查也通过
+程序包‘gld’打开成功，MD5和检查也通过
+程序包‘data.table’打开成功，MD5和检查也通过
+程序包‘readxl’打开成功，MD5和检查也通过
+程序包‘httr’打开成功，MD5和检查也通过
+程序包‘DescTools’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\suhui\AppData\Local\Temp\RtmpOcFRNX\downloaded_packages里
+Error in install.packages : Updating loaded packages
+程序包‘RcppEigen’打开成功，MD5和检查也通过
+程序包‘ranger’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\suhui\AppData\Local\Temp\RtmpOcFRNX\downloaded_packages里

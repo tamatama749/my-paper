@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="zh"><Esri><CreaDate>20210909</CreaDate><CreaTime>13352000</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="d:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Spatial Analyst Tools.tbx\Aggregate" Date="20210909" Time="133520">Aggregate jyl_avg_00_15.tif F:\data\npp\average\pre10km.tif 10 MEAN EXPAND DATA</Process></lineage></DataProperties></Esri></metadata>
